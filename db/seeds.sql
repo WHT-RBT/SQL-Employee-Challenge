@@ -7,16 +7,17 @@ VALUES
     ("Technology", 004);
 
 -- Adding role, salary and department id
-INSERT INTO role(title, salary, department_id), 
+INSERT INTO role(title, salary, department_id)
 VALUES 
-    ("Director", 280000, 001),
-    ("Exec Asst", 90000, 001),
-    ("Sales Manager", 135000, 002),
-    ("Sales Rep", 90000, 002),
-    ("Marketing Manager", 135000, 003),
-    ("Exec Asst", 85000, 003),
-    ("Engineer", $198000, 004),
-    ("Developer", 130000, 004),
+    ("Director", 280000, 1),
+    ("Exec Asst", 90000, 1),
+    ("Sales Manager", 135000, 2),
+    ("Sales Rep", 90000, 2),
+    ("Marketing Manager", 135000, 3),
+    ("Exec Asst", 85000, 3),
+    ("Engineer", 198000, 4),
+    ("Developer", 130000, 4);
+
 
 -- Adding employee data
 INSERT INTO employee (first_name, last_name, role_id, manager_id)

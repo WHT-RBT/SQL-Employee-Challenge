@@ -1,11 +1,16 @@
 SELECT
--- employees_with_managers.id AS employee_id,
--- employees_with_managers.first_name,
--- employees_with_managers.last_name,
--- employee_info.title,
--- employee_info.salary,
--- employee_info.department_name,
--- employees_with_managers.manager_name
--- FROM employee_info
--- JOIN employees_with_managers on employee_info.role_id = employees_with_managers.role_id;
-
+  e.id AS employee_id,
+  e.first_name,
+  e.last_name,
+  r.title AS role_title,
+  r.salary,
+  d.name AS department_name,
+  CONCAT(m.first_name, ' ', m.last_name) AS manager_name
+FROM
+  employee AS e
+LEFT JOIN
+  role AS r ON e.role_id = r.id
+LEFT JOIN
+  department AS d ON r.department_id = d.id
+LEFT JOIN
+  employee AS m ON e.manager_id = m.id;
