@@ -1,5 +1,7 @@
 # SQL: Employee Tracker
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called content management systems (CMS).  
 A command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
@@ -13,6 +15,7 @@ Because this application won’t be deployed, you’ll also need to create a wal
 - Walkthrough Video & Images
 - Mock Up
 - Links
+- License
 
 ## User Story
 
@@ -63,13 +66,6 @@ THEN I am prompted to select an employee to update and their new role and this i
 > Now initiate the application with the following command:
 >
 > - node index.js
->
-> - npm start
->
-> You can access the application in your web brower at:
->
-> - http://localhost:3001
->
 > <br>
 
 Use the available endpoints to manage employee data:
@@ -102,3 +98,9 @@ The following image shows the table design of the employee database:
 GitHub Repo Link:
         https://github.com/WHT-RBT/SQL-Employee-Tracker <br>
 Email:   <a href="mailto:the.whiterabbit@yahoo.com">Email me 🐇</a>
+
+<br>
+
+## License
+
+This project is licensed under the MIT License. See License for details.
