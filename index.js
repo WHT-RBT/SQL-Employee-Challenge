@@ -20,8 +20,18 @@ const db = mysql.createConnection(
   console.log(`You are now connected to employee_db database.`)
 );
 
-// render a list of all movies
-
+// renders a list of all employees
+app.get('/employees', (req, res) => {
+  const sql = 'SELECT * FROM employees';
+  db.query(sql, (err, rows) => {
+    if (err) {
+      console.log(err);
+      res.status(500).json({ error: 'Failed to retrieve list of all employees' });
+      return;
+    }
+    res.json(rows);
+  });
+});
 
 // updates employee's managers
 
