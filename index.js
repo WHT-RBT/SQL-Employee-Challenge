@@ -33,8 +33,20 @@ app.get('/employees', (req, res) => {
   });
 });
 
-// updates employee's managers
-
+// updates employee manager
+app.put('/employees/:id/manager', (req, res) => {
+  const { id } = req.params;
+  const { managerId } = req.body;
+  const sql = 'UPDATE employees SET manager_id = ? WHERE id = ?';
+  db.query(sql, [managerId, id], (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(500).json({ error: 'Failed to update employee manager' });
+      return;
+    }
+    res.json({ message: 'Employee manager has been updated successfully' });
+  });
+});
 
 // views employee by manager
 
