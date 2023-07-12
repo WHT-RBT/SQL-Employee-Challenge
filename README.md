@@ -93,7 +93,7 @@ The following image shows the table design of the employee database:
 ![Alt text](assets/12-sql-homework-demo-01.png)
 
  <br>
-
+ 
 ## Links & Contact Info
 
 GitHub Repo Link:
