@@ -47,14 +47,14 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## Getting Started
 
-> To use this application you first need to install all dependencies below from the command line, remembering to start your terminal from the db folder:
+> To use this application you first need to install all dependencies below from the command line:
 >
 Requirements before starting:
 > - npm install
-> - npm install express
+> - npm install express mysql2
 > - npm i inquirer@8.2.4
 >
-> Log into mysql and run the database using the following commands:
+> Log into mysql and run the database using the following commands, remembering to start your terminal from the db folder:
 >
 > - mysql -u root -p
 >
@@ -64,7 +64,7 @@ Requirements before starting:
 >
 > - SOURCE seeds.sql
 >
-> Now initiate the application with the following command:
+> Now initiate the application with the following command to start your employee tracker app:
 >
 > - node index.js
 > <br>
