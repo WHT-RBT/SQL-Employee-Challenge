@@ -10,7 +10,7 @@ const db = mysql.createConnection({
   // MySQL username
   user: 'root',
   // MySQL password
-  password: '',
+  password: '@Gd1zgD143RLC4evR*28+',
   database: 'employee_db'
 });
 
@@ -38,7 +38,7 @@ const promptManagerId = () => {
     {
       type: 'input',
       name: 'managerId',
-      message: 'Enter the manager ID:'
+      message: 'Please enter manager ID:'
     }
   ]);
 };
@@ -49,7 +49,7 @@ const promptDepartmentId = () => {
     {
       type: 'input',
       name: 'departmentId',
-      message: 'Enter the department ID:'
+      message: 'Please enter department ID:'
     }
   ]);
 };
@@ -63,9 +63,8 @@ const getAllEmployees = () => {
       console.log(err);
       return;
     }
-    console.log('--- All Employees ---');
+    console.log('*** All Employees ***');
     console.table(rows);
-    console.log('---------------------');
     promptAction();
   });
 };
@@ -81,7 +80,6 @@ const getEmployeesByManager = (managerId) => {
     }
     console.log('--- Employees by Manager ---');
     console.table(rows);
-    console.log('----------------------------');
     promptAction();
   });
 };
@@ -95,9 +93,8 @@ const getEmployeesByDepartment = (departmentId) => {
       console.log(err);
       return;
     }
-    console.log('--- Employees by Department ---');
+    console.log('*** Employees by Department ***');
     console.table(rows);
-    console.log('-------------------------------');
     promptAction();
   });
 };
@@ -111,16 +108,15 @@ const calculateDepartmentBudget = () => {
       console.log(err);
       return;
     }
-    console.log('--- Department Budgets ---');
+    console.log('*** Department Budgets ***');
     console.table(rows);
-    console.log('--------------------------');
     promptAction();
   });
 };
 
 // Start the command-line application
 const startApp = () => {
-  console.log('=== Employee Management System ===');
+  console.log('=== Employee Tracker System ===');
   promptAction();
 };
 
@@ -145,7 +141,7 @@ const promptAction = () => {
         calculateDepartmentBudget();
         break;
       case 'Exit':
-        console.log('Exiting the application...');
+        console.log('You have exited the application');
         db.end();
         break;
     }
@@ -162,6 +158,5 @@ db.connect((err) => {
   console.log('You are now connected to the employee_db database.');
   startApp();
 });
-
 
 // module.exports = db;

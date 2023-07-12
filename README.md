@@ -2,10 +2,21 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called content management systems (CMS).  
+![Technologies](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
+![Technologies](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
+![Technologies](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
+![Technologies](https://img.shields.io/badge/-MySQL-4479A1?logo=MySQL&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Inquirer-000000?logo=&logoColor=white)
+<br>
+<br>
+<h3>Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called content management systems (CMS).  
 A command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
+<br>
+Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.</h3>
+
+<br>
 
 ## Table of Contents
 
@@ -43,13 +54,13 @@ THEN I am prompted to enter the name, salary, and department for the role and th
 WHEN I choose to add an employee <br>
 THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database <br>
 WHEN I choose to update an employee role <br>
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database <br>
+THEN I am prompted to select an employee to update and their new role and this information is updated in the database <br><br>
 
 ## Getting Started
 
 > To use this application you first need to install all dependencies below from the command line:
 >
-Requirements before starting:
+>Requirements before starting:
 > - npm install
 > - npm install express mysql2
 > - npm i inquirer@8.2.4
@@ -60,14 +71,15 @@ Requirements before starting:
 >
 > - enter your mysql password
 >
-> - SOURCE schema.sql
+> - SOURCE schema.sql;
 >
-> - SOURCE seeds.sql
+> - SOURCE seeds.sql;
 >
 > Now initiate the application with the following command to start your employee tracker app:
 >
 > - node index.js
-> <br>
+> 
+<br>
 
 Use the available endpoints to manage employee data:
 
@@ -104,4 +116,4 @@ Email:   <a href="mailto:the.whiterabbit@yahoo.com">Email me 🐇</a>
 
 ## License
 
-This project is licensed under the MIT License. See License for details.
+This project is licensed under the MIT License. See License file for details.
