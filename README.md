@@ -47,13 +47,14 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## Getting Started
 
-> To use this application you first need to install all dependencies below from the command line:
+> To use this application you first need to install all dependencies below from the command line, remembering to start your terminal from the db folder:
 >
+Requirements before starting:
 > - npm install
 > - npm install express
 > - npm i inquirer@8.2.4
 >
-> Now log into mysql and run the database using the following commands:
+> Log into mysql and run the database using the following commands:
 >
 > - mysql -u root -p
 >
