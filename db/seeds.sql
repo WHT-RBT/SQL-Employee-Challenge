@@ -1,31 +1,31 @@
 -- Adding department data
-INSERT INTO department (id, name)
+INSERT INTO departments (name)
 VALUES 
-    (111, 'Operations'), 
-    (222, 'Marketing'), 
-    (333, 'Sales'), 
-    (444, 'Technology');
+    ('Operations'), 
+    ('Marketing'), 
+    ('Sales'), 
+    ('Technology');
 
 -- Adding role, salary, and department id
-INSERT INTO role (id, title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES 
-    (1, 'Director', 280000, 111),
-    (2, 'Exec Asst', 90000, 111),
-    (3, 'Sales Manager', 135000, 222),
-    (4, 'Sales Rep', 90000, 222),
-    (5, 'Marketing Manager', 135000, 333),
-    (6, 'Exec Asst', 85000, 333),
-    (7, 'Engineer', 198000, 444),
-    (8, 'Developer', 130000, 444);
+    ('Director', 280000, 1),
+    ('Exec Asst', 90000, 1),
+    ('Sales Manager', 135000, 2),
+    ('Sales Rep', 90000, 2),
+    ('Marketing Manager', 135000, 3),
+    ('Exec Asst', 85000, 3),
+    ('Engineer', 198000, 4),
+    ('Developer', 130000, 4);
 
 -- Adding employee data
-INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES 
-    (1, 'Joshua', 'Waters', 1, NULL),
-    (2, 'Daisy', 'Flowers', 2, 1),
-    (3, 'Luke', 'Avery', 3, 1),
-    (4, 'Lacy', 'Powers', 4, 3),
-    (5, 'Riley', 'Wonders', 5, 1),
-    (6, 'Lily', 'Vandermoon', 6, 5),
-    (7, 'Holly', 'White', 7, 1),
-    (8, 'Rue', 'Smalls', 8, 7);
+    ('Joshua', 'Waters', 1, NULL),
+    ('Daisy', 'Flowers', 2, 1),
+    ('Luke', 'Avery', 3, 1),
+    ('Lacy', 'Powers', 4, 3),
+    ('Riley', 'Wonders', 5, 1),
+    ('Lily', 'Vandermoon', 6, 5),
+    ('Holly', 'White', 7, 1),
+    ('Rue', 'Smalls', 8, 7);
