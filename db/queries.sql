@@ -1,20 +1,56 @@
--- -- GET /employees: Retrieve a list of all employees.
--- SELECT *
--- FROM employee;
+-- -- -- View all employees
+-- SELECT
+--     employees.id,
+--     employees.first_name,
+--     employees.last_name,
+--     roles.title AS role,
+--     departments.name AS department,
+--     roles.salary,
+--     CONCAT(managers.first_name, ' ', managers.last_name) AS manager
+-- FROM
+--     employees
+--     LEFT JOIN roles ON employees.role_id = roles.id
+--     LEFT JOIN departments ON roles.department_id = departments.id
+--     LEFT JOIN employees AS managers ON employees.manager_id = managers.id;
 
--- -- GET /employees/manager/:managerId: View employees by manager.
--- SELECT e.*
--- FROM employee e
--- JOIN employee m ON e.manager_id = m.id
--- WHERE m.id = :managerId;
+-- -- View employees by manager
+-- SELECT
+--     employees.id,
+--     employees.first_name,
+--     employees.last_name,
+--     roles.title AS role,
+--     departments.name AS department,
+--     roles.salary,
+--     CONCAT(managers.first_name, ' ', managers.last_name) AS manager
+-- FROM
+--     employees
+--     LEFT JOIN roles ON employees.role_id = roles.id
+--     LEFT JOIN departments ON roles.department_id = departments.id
+--     LEFT JOIN employees AS managers ON employees.manager_id = managers.id
+-- WHERE
+--     managers.id = [manager_id];
 
--- -- GET /employees/department/:departmentId: View employees by department.
--- SELECT e.*
--- FROM employee e
--- WHERE e.department_id = :departmentId;
+-- -- View employees by department
+-- SELECT
+--     employees.id,
+--     employees.first_name,
+--     employees.last_name,
+--     roles.title AS role,
+--     roles.salary,
+--     CONCAT(managers.first_name, ' ', managers.last_name) AS manager
+-- FROM
+--     employees
+--     LEFT JOIN roles ON employees.role_id = roles.id
+--     LEFT JOIN employees AS managers ON employees.manager_id = managers.id
+-- WHERE
+--     roles.department_id = [department_id];
 
--- -- GET /departments/budget: Calculate the total utilized budget for each department.
--- SELECT d.name AS department_name, SUM(r.salary) AS total_budget
--- FROM department d
--- LEFT JOIN role r ON d.id = r.department_id
--- GROUP BY d.name;
+-- -- Calculate department budget
+-- SELECT
+--     departments.name AS department,
+--     SUM(roles.salary) AS total_budget
+-- FROM
+--     departments
+--     LEFT JOIN roles ON departments.id = roles.department_id
+-- GROUP BY
+--     departments.name;

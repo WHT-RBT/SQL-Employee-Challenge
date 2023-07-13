@@ -35,8 +35,11 @@ const promptActionSelection = () => {
   ]);
 };
 
+// Define function to prompt user for new role details
 const promptNewRole = async () => {
   const departments = await getAllDepartments();
+
+// Prompt for department, title, and salary
   return inquirer.prompt([
     {
       type: 'list',
@@ -60,6 +63,8 @@ const promptNewRole = async () => {
 // Prompt user for manager ID
 const promptManagerId = async () => {
   const employees = await getAllEmployees();
+
+ // Prompt for manager selection
   return inquirer.prompt([
     {
       type: 'list',
@@ -85,7 +90,7 @@ const promptDepartmentId = async () => {
     }
   ]);
 };
-
+// function to get all departments
 const getAllDepartments = async () => {
   try {
     const sql = 'SELECT id AS value, name FROM departments';
@@ -96,7 +101,7 @@ const getAllDepartments = async () => {
     console.log(error);
   }
 };
-
+// function to get all employees
 const getAllEmployees = async () => {
   try {
     const sql = 'SELECT * FROM employees';
@@ -122,7 +127,7 @@ const getAllEmployeesList = async () => {
 };
 
 // Retrieve and display employees by manager
-const getEmployeesByManager = async () => {
+const getEmployeesByManagerID = async () => {
   try {
     const { managerId } = await promptManagerId();
     const sql = 'SELECT * FROM employees WHERE manager_id = ?';
@@ -140,7 +145,7 @@ const getEmployeesByManager = async () => {
 const getEmployeesByDepartment = async () => {
   try {
     const { departmentId } = await promptDepartmentId();
-    const sql = 'SELECT * FROM employees WHERE department_id = ?';
+    const sql = 'SELECT * FROM roles WHERE department_id = ?';
     const [rows, fields] = await db.promise().query(sql, [departmentId]);
     console.log('*** Employees by Department ***');
     console.log(rows);
@@ -156,7 +161,7 @@ const getEmployeesByDepartment = async () => {
 const calculateDepartmentBudget = async () => {
   try {
     const sql =
-      'SELECT department_id, SUM(salary) AS total_budget FROM employees GROUP BY department_id';
+      'SELECT department_id, SUM(salary) AS total_budget FROM roles GROUP BY department_id';
     const [rows, fields] = await db.promise().query(sql);
     console.log('*** Department Budgets ***');
     console.table(rows);
@@ -167,6 +172,7 @@ const calculateDepartmentBudget = async () => {
   }
 };
 
+// function to add a new role
 const addNewRole = async () => {
   try {
     const answers = await promptNewRole();
@@ -195,7 +201,7 @@ const promptAction = () => {
         getAllEmployeesList();
         break;
       case 'View employees by manager':
-        getEmployeesByManager();
+        getEmployeesByManagerID();
         break;
       case 'View employees by department':
         getEmployeesByDepartment();
@@ -214,7 +220,7 @@ const promptAction = () => {
   });
 };
 
-// Connect to the database
+// Connects to the database
 db.connect((err) => {
   if (err) {
     console.log('Failed to connect to the employee database');
@@ -224,4 +230,3 @@ db.connect((err) => {
   console.log('You are now connected to the employee database.');
   startApp();
 });
-
