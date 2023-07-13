@@ -81,19 +81,6 @@ THEN I am prompted to select an employee to update and their new role and this i
 > 
 <br>
 
-Use the available endpoints to manage employee data:
-
-- GET /employees: Retrieve a list of all employees.
-- PUT /employees/:id/manager: Update an employee's manager.
-- GET /employees/manager/:managerId: View employees by manager.
-- GET /employees/department/:departmentId: View employees by department.
-- DELETE /departments/:departmentId: Delete a department.
-- DELETE /roles/:roleId: Delete a role.
-- DELETE /employees/:employeeId: Delete an employee.
-- GET /departments/budget: Calculate the total utilized budget for each department.
-
- <br>
-
 ## Walkthrough Video & Images
 
 The following video shows an example of the application being used from the command line:

@@ -12,7 +12,7 @@ const db = mysql.createConnection({
   user: 'root',
 
   // MySQL password
-  password: '@Gd1zgD143RLC4evR*28+',
+  password: '',
   database: 'employee_db'
 });
 
@@ -225,5 +225,3 @@ db.connect((err) => {
   startApp();
 });
 
-
-// @Gd1zgD143RLC4evR*28+
