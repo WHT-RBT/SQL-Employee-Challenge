@@ -23,10 +23,8 @@ Because this application won’t be deployed, you’ll also need to create a wal
 - User Story
 - Description
 - Getting Started
-- Walkthrough Video & Images
-- Mock Up
+- Walkthrough Video
 - Links
-- License
 
 ## User Story
 
@@ -75,7 +73,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 >
 > - SOURCE seeds.sql;
 >
-> Now initiate the application with the following command to start your employee tracker app:
+> You will need initiate the application from the index.js file to start your employee tracker app by using the following command in the terminal:
 >
 > - node index.js
 > 
@@ -85,12 +83,9 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 The following video shows an example of the application being used from the command line:
 
-![Alt text](assets/12-sql-homework-video-thumbnail.png)
+<a href='https://drive.google.com/file/d/1eIMek84iKXnikJbDySWGH4VVIV8bA98E/view'>==>> Click this link to be directed to the Walkthrough Video</a>
 
-The following image shows the table design of the employee database:
-
-![Alt text](assets/12-sql-homework-demo-01.png)
-
+![Video Walkthrough](<assets/Video Walkthrough - SQL Employee Tracker.gif>)
  <br>
  
 ## Links & Contact Info
@@ -99,8 +94,5 @@ GitHub Repo Link:
         https://github.com/WHT-RBT/SQL-Employee-Tracker <br>
 Email:   <a href="mailto:the.whiterabbit@yahoo.com">Email me 🐇</a>
 
+
 <br>
-
-## License
-
-This project is licensed under the MIT License. See License file for details.
