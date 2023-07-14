@@ -1,4 +1,3 @@
-
 const express = require('express');
 const inquirer = require('inquirer');
 
@@ -35,7 +34,7 @@ const promptActionSelection = () => {
   ]);
 };
 
-// Define function to prompt user for new role details
+// Function to prompt user for new role details
 const promptNewRole = async () => {
   const departments = await getAllDepartments();
 
@@ -172,7 +171,7 @@ const calculateDepartmentBudget = async () => {
   }
 };
 
-// function to add a new role
+// Function to add a new role
 const addNewRole = async () => {
   try {
     const answers = await promptNewRole();
